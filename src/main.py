@@ -1,8 +1,14 @@
-from app.infrastructure.ItemFactory import ItemFactory
-from app.models.Inventory import Inventory
-from app.models.Slot import Slot
+from app.infrastructure.ItemFactory import *
+from app.models.Inventory import *
+from app.models.Slot import *
 
 itemFactory = ItemFactory()
-item = itemFactory.makeItem()
+inventory = Inventory()
 
-print(item.toString())
+inventory.addItem(itemFactory.makeItem())
+inventory.addItem(itemFactory.makeItem())
+inventory.addItem(itemFactory.makeItem())
+
+for slot in inventory.slots():
+	print(slot)
+

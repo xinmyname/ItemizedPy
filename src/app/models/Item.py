@@ -1,7 +1,10 @@
-class Item:
-	def __init__(self):
-		pass
+from .Descriptor import *
 
-	def toString(self):
+class Item:
+	
+	def __init__(self):
+		self.descriptor = Descriptor()
+
+	def __str__(self):
 		return "item"
 		

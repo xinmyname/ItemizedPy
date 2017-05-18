@@ -1,6 +1,7 @@
-from ..models.Item import Item
+from ..models.Item import *
 
 class ItemFactory:
+	
 	def __init__(self):
 		pass 
 
