@@ -4,7 +4,9 @@
 - Python 3.6.1
 
 ## Setup
-  python -m venv venv
-  
+    python3 -m venv venv
+    . ./venv/bin/activate
+    
 ## Running
-    python 
+    cd src
+    python main.py
