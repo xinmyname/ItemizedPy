@@ -35,7 +35,7 @@ class Slot:
 		elif self.quantity == 9:
 			quantityText = "Nine"
 		else:
-			quantityText = str(quantity)
+			quantityText = str(self.quantity)
 
 		return "{} {}".format(quantityText, text)
 
