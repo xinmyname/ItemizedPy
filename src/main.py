@@ -5,8 +5,7 @@ from app.models.Slot import *
 
 numItems = 1
 
-usage = "Usage: %prog [count]"
-parser = OptionParser(usage)
+parser = OptionParser("Usage: %prog [count]")
 
 (options,args) = parser.parse_args()
 
@@ -22,4 +21,3 @@ while numItems > 0:
 
 for slot in inventory.slots():
 	print(slot)
-

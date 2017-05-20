@@ -38,6 +38,3 @@ class Slot:
 			quantityText = str(self.quantity)
 
 		return "{} {}".format(quantityText, text)
-
-
-		
