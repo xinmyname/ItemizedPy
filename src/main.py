@@ -10,14 +10,14 @@ parser = OptionParser("Usage: %prog [count]")
 (options,args) = parser.parse_args()
 
 if len(args) > 0:
-	numItems = int(args[0])
+    numItems = int(args[0])
 
 itemFactory = ItemFactory()
 inventory = Inventory()
 
 while numItems > 0:
-	inventory.addItem(itemFactory.makeItem())
-	numItems -= 1
+    inventory.addItem(itemFactory.makeItem())
+    numItems -= 1
 
 for slot in inventory.slots():
-	print(slot)
+    print(slot)
