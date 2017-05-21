@@ -5,6 +5,7 @@ Yes, it's very simple. That's the idea.
 
 ## Example
 
+```
 $> python itemize.py
 You have:
   An item
@@ -14,6 +15,7 @@ You have:
 $> python itemize.py 42
 You have: 
   42 items
+```
 
 ## Prerequisites
 - Python 3.6.1
@@ -23,5 +25,4 @@ You have:
     . ./venv/bin/activate
     
 ## Running
-    cd src
-    python main.py
+    python src/itemize.py
