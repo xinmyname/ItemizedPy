@@ -19,5 +19,7 @@ while numItems > 0:
     inventory.addItem(itemFactory.makeItem())
     numItems -= 1
 
+print("You have:")
+
 for slot in inventory.slots():
-    print(slot)
+    print("  {}".format(slot))
