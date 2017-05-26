@@ -1,25 +1,29 @@
-from optparse import OptionParser
-from app.infrastructure.ItemFactory import *
-from app.models.Inventory import *
-from app.models.Slot import *
+"""Creates items and adds them an inventory."""
+import argparse
+from app.infrastructure.ItemFactory import ItemFactory
+from app.models.Inventory import Inventory
 
-numItems = 1
+def run(args):
+    """Run the program"""
 
-parser = OptionParser("Usage: %prog [count]")
+    num_items = args.count
 
-(options,args) = parser.parse_args()
+    item_factory = ItemFactory()
+    inventory = Inventory()
 
-if len(args) > 0:
-    numItems = int(args[0])
+    while num_items > 0:
+        inventory.addItem(item_factory.makeItem())
+        num_items -= 1
 
-itemFactory = ItemFactory()
-inventory = Inventory()
+    print("You have:")
+    print("")
 
-while numItems > 0:
-    inventory.addItem(itemFactory.makeItem())
-    numItems -= 1
+    for slot in inventory.slots():
+        print("  {}".format(slot))
 
-print("You have:")
+PARSER = argparse.ArgumentParser(description="Creates items and adds them an inventory.")
 
-for slot in inventory.slots():
-    print("  {}".format(slot))
+PARSER.add_argument('count', metavar='count', type=int, nargs='?',
+                    default=1, help='Number of items')
+
+run(PARSER.parse_args())
