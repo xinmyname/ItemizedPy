@@ -3,7 +3,7 @@ import argparse
 from app.infrastructure.ItemFactory import ItemFactory
 from app.models.Inventory import Inventory
 
-def run(args):
+def main(args):
     """Run the program"""
 
     num_items = args.count
@@ -26,4 +26,4 @@ PARSER = argparse.ArgumentParser(description="Creates items and adds them an inv
 PARSER.add_argument('count', metavar='count', type=int, nargs='?',
                     default=1, help='Number of items')
 
-run(PARSER.parse_args())
+main(PARSER.parse_args())
