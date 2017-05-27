@@ -8,3 +8,8 @@ class ItemFactory:
     def make_item(self):
         """Creates items"""
         return Item()
+
+def plural_of(word):
+    """Makes a singular word plurals"""
+    return word
+

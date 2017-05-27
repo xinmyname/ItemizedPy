@@ -1,10 +1,14 @@
 """Creates items and adds them an inventory."""
 import argparse
 from infrastructure import ItemFactory
+from infrastructure import plural_of
 from models import Inventory
 
 def main(args):
     """Run the program"""
+
+    #print(plural_of("word"))
+    #exit()
 
     num_items = args.count
 
