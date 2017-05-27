@@ -1,7 +1,9 @@
-from .Descriptor import *
+"""An item"""
+from .Descriptor import Descriptor
 
 class Item:
-    
+    """An item"""
+
     def __init__(self):
         self.descriptor = Descriptor()
 

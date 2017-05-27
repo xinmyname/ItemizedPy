@@ -1,7 +1,9 @@
-from ..models.Item import *
+"""Creates items"""
+from ..models.Item import Item
 
 class ItemFactory:
+    """Creates items"""
 
-    def makeItem(self):
+    def make_item(self):
+        """Creates items"""
         return Item()
-

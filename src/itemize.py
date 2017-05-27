@@ -12,7 +12,7 @@ def main(args):
     inventory = Inventory()
 
     while num_items > 0:
-        inventory.addItem(item_factory.makeItem())
+        inventory.add_item(item_factory.make_item())
         num_items -= 1
 
     print("You have:")

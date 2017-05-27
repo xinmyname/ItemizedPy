@@ -1,8 +1,9 @@
-from .Item import *
+"""Slot holds an item and a quantity"""
 
 class Slot:
+    """Slot holds an item and a quantity"""
 
-    def __init__(self,item):
+    def __init__(self, item):
 
         self.quantity = 1
         self.item = item
@@ -15,26 +16,26 @@ class Slot:
             text = "{0.item}s".format(self)
 
         if self.quantity == 1:
-            quantityText = "An"
+            quantity_text = "An"
         elif self.quantity == 0:
-            quantityText = "No"
+            quantity_text = "No"
         elif self.quantity == 2:
-            quantityText = "Two"
+            quantity_text = "Two"
         elif self.quantity == 3:
-            quantityText = "Three"
+            quantity_text = "Three"
         elif self.quantity == 4:
-            quantityText = "Four"
+            quantity_text = "Four"
         elif self.quantity == 5:
-            quantityText = "Five"
+            quantity_text = "Five"
         elif self.quantity == 6:
-            quantityText = "Six"
+            quantity_text = "Six"
         elif self.quantity == 7:
-            quantityText = "Seven"
+            quantity_text = "Seven"
         elif self.quantity == 8:
-            quantityText = "Eight"
+            quantity_text = "Eight"
         elif self.quantity == 9:
-            quantityText = "Nine"
+            quantity_text = "Nine"
         else:
-            quantityText = str(self.quantity)
+            quantity_text = str(self.quantity)
 
-        return "{} {}".format(quantityText, text)
+        return "{} {}".format(quantity_text, text)
