@@ -1,4 +1,30 @@
-"""Slot holds an item and a quantity"""
+"""All of the model objects"""
+
+class Descriptor():
+    """Holds descriptor for item"""
+    pass
+
+DEFAULT_DESCRIPTOR = Descriptor()
+
+class Inventory:
+    """Holds inventory"""
+
+    def __init__(self):
+        self.__slots = {}
+
+    def add_item(self, item):
+        """Adds an item to the inventory"""
+
+        if item.descriptor in self.__slots:
+            slot = self.__slots[item.descriptor]
+            slot.quantity += 1
+        else:
+            self.__slots[item.descriptor] = Slot(item)
+
+    def slots(self):
+        """Returns a list of slots"""
+        return self.__slots.values()
+
 
 class Slot:
     """Slot holds an item and a quantity"""
@@ -39,3 +65,13 @@ class Slot:
             quantity_text = str(self.quantity)
 
         return "{} {}".format(quantity_text, text)
+
+
+class Item:
+    """An item"""
+
+    def __init__(self):
+        self.descriptor = DEFAULT_DESCRIPTOR
+
+    def __str__(self):
+        return "item"

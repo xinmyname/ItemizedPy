@@ -1,7 +1,7 @@
 """Creates items and adds them an inventory."""
 import argparse
-from app.infrastructure.ItemFactory import ItemFactory
-from app.models.Inventory import Inventory
+from infrastructure import ItemFactory
+from models import Inventory
 
 def main(args):
     """Run the program"""

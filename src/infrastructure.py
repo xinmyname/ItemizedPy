@@ -1,5 +1,6 @@
-"""Creates items"""
-from ..models.Item import Item
+"""Holds all infrastructure related items"""
+
+from models import Item
 
 class ItemFactory:
     """Creates items"""

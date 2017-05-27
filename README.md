@@ -26,3 +26,8 @@ You have:
     
 ## Running
     python src/itemize.py
+
+## Notes
+I think this is about as Pythonic as I can make it. I don't like having multiple classes in one file, but that seems to make Python the happiest. Putting them into sub-modules and importing them was punished by repeating myself over and over again repeatiously, e.g. `from app.models.Item import Item`.
+
+
