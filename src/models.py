@@ -1,6 +1,6 @@
 """All of the model objects"""
 
-from pluralizer import plural_of
+import pluralizer
 
 class Descriptor():
     """Holds descriptor for item"""
@@ -38,7 +38,7 @@ class Slot:
 
     def __str__(self):
 
-        text = plural_of(str(self.item), self.quantity)
+        text = pluralizer.plural_of(str(self.item), self.quantity)
 
         if self.quantity == 1:
             quantity_text = "An"

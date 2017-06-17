@@ -1,15 +1,15 @@
 """Creates items and adds them an inventory."""
 import argparse
-from infrastructure import ItemFactory
-from models import Inventory
+import infrastructure
+import models
 
 def main(args):
     """Run the program"""
 
     num_items = args.count
 
-    item_factory = ItemFactory()
-    inventory = Inventory()
+    item_factory = infrastructure.ItemFactory()
+    inventory = models.Inventory()
 
     while num_items > 0:
         inventory.add_item(item_factory.make_item())

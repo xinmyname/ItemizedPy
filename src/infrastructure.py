@@ -1,10 +1,10 @@
 """Holds all infrastructure related items"""
 
-from models import Item
+import models
 
 class ItemFactory:
     """Creates items"""
 
     def make_item(self):
         """Creates items"""
-        return Item()
+        return models.Item()
